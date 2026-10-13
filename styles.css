@@ -9,3 +9,15 @@
 @media(max-width:700px){.hero{max-height:none;height:640px}.hero h1{font-size:clamp(60px,19vw,77px)}.category-ribbon{display:flex;overflow-x:auto;justify-content:flex-start;scroll-snap-type:x proximity;min-height:95px}.category-ribbon>a{flex:0 0 108px;height:72px;scroll-snap-align:start}.category-ribbon strong{font-size:8px;letter-spacing:.02em}.engraving{transform:scale(.72);flex-basis:47px}.engraving-books{flex-basis:47px}}
 @media(min-width:961px){.masthead{height:clamp(44px,3.25vw,62px)}.category-ribbon{min-height:0;padding-block:11px}.category-ribbon>a{height:5.3vw;max-height:86px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* Laptop widths (961–1365px, incl. 125% display scaling): the hero's height
+   follows the window while the headline stack has minimum sizes, so the
+   category ribbon used to cover "Explore the journal". Give the hero a floor,
+   crop the artwork instead of stretching it, and scale the stack with the width. */
+@media(min-width:961px) and (max-width:1365px){
+.hero{height:max(29.3vw,350px)}
+.hero-art{object-fit:cover;object-position:center 40%}
+.hero-copy{top:9%}
+.hero h1{font-size:clamp(66px,6.6vw,84px);margin-bottom:14px}
+.hero-deck{font-size:clamp(18px,1.85vw,23px);margin-bottom:9px}
+}
