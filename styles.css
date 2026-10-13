@@ -21,3 +21,13 @@
 .hero h1{font-size:clamp(66px,6.6vw,84px);margin-bottom:14px}
 .hero-deck{font-size:clamp(18px,1.85vw,23px);margin-bottom:9px}
 }
+
+/* The side motto ("Better places for ordinary lives.") sits under nine topic
+   links; below 1600px the stack ran under the category ribbon. Tighten it. */
+@media(min-width:961px) and (max-width:1599px){
+.hero-topics{top:7%}
+.topic-list{gap:0;line-height:1.6}
+.side-motto{font-size:19px;margin-top:12px;padding-top:14px}
+.side-motto:after{margin-top:10px}
+}
+.side-motto{text-shadow:0 1px 6px #000c,0 0 2px #0009}
