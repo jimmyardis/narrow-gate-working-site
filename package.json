@@ -1,0 +1,1 @@
+{"name":"narrow-gate","private":true,"type":"module","scripts":{"dev":"node server.mjs","check":"node --check app.js"}}
